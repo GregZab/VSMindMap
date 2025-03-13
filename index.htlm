@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Business Mind Map</title>
+  <link rel="stylesheet" href="jsmind.style.min.css">
+</head>
+<body>
+
+<div id="jsmind_container" style="width:100%; height:600px; border:1px solid #ccc;"></div>
+
+<script src="jsmind.js"></script>
+<script>
+var mind = {
+  "meta": {"name":"Business Structure","author":"You"},
+  "format":"node_array",
+  "data":[
+    {"id":"root","isroot":true,"topic":"Vitalmax Online (UK)"},
+    {"id":"amazonuk","parentid":"root","topic":"Amazon UK"},
+    {"id":"amazoneu","parentid":"root","topic":"Amazon EU"},
+    {"id":"amzDE","parentid":"amazoneu","topic":"Amazon DE"},
+    {"id":"amzFR","parentid":"amazoneu","topic":"Amazon FR"},
+    {"id":"amzES","parentid":"amazoneu","topic":"Amazon ES"},
+    {"id":"amzIT","parentid":"amazoneu","topic":"Amazon IT"},
+
+    {"id":"ambolo","parentid":"root","topic":"Ambolo (Poland)"},
+    {"id":"warehouse","parentid":"ambolo","topic":"Warehouse"},
+    {"id":"marpol","parentid":"warehouse","topic":"Marpol (Supplier)"},
+    {"id":"minterio","parentid":"warehouse","topic":"M-interio (Supplier)"}
+  ]
+};
+
+var options = {
+  container:'jsmind_container',
+  theme:'primary',
+  editable:true
+};
+
+var jm = new jsMind(options);
+jm.show(mind);
+</script>
+</body>
+</html>
